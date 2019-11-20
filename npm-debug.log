@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'run', 'devStart' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 verbose run-script [ 'predevStart', 'devStart', 'postdevStart' ]
+5 info lifecycle simple-node-rest-api@1.0.0~predevStart: simple-node-rest-api@1.0.0
+6 silly lifecycle simple-node-rest-api@1.0.0~predevStart: no script for predevStart, continuing
+7 info lifecycle simple-node-rest-api@1.0.0~devStart: simple-node-rest-api@1.0.0
+8 verbose lifecycle simple-node-rest-api@1.0.0~devStart: unsafe-perm in lifecycle true
+9 verbose lifecycle simple-node-rest-api@1.0.0~devStart: PATH: /usr/share/npm/bin/node-gyp-bin:/home/italo/Workspace/SimpleNodeRestApi/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle simple-node-rest-api@1.0.0~devStart: CWD: /home/italo/Workspace/SimpleNodeRestApi
+11 silly lifecycle simple-node-rest-api@1.0.0~devStart: Args: [ '-c', 'nodemon serve.js' ]
+12 info lifecycle simple-node-rest-api@1.0.0~devStart: Failed to exec devStart script
+13 verbose stack Error: simple-node-rest-api@1.0.0 devStart: `nodemon serve.js`
+13 verbose stack spawn ENOENT
+13 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:17:16)
+13 verbose stack     at emitTwo (events.js:87:13)
+13 verbose stack     at ChildProcess.emit (events.js:172:7)
+13 verbose stack     at maybeClose (internal/child_process.js:821:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+14 verbose pkgid simple-node-rest-api@1.0.0
+15 verbose cwd /home/italo/Workspace/SimpleNodeRestApi
+16 error Linux 4.4.0-169-generic
+17 error argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "devStart"
+18 error node v4.2.6
+19 error npm  v3.5.2
+20 error file sh
+21 error code ELIFECYCLE
+22 error errno ENOENT
+23 error syscall spawn
+24 error simple-node-rest-api@1.0.0 devStart: `nodemon serve.js`
+24 error spawn ENOENT
+25 error Failed at the simple-node-rest-api@1.0.0 devStart script 'nodemon serve.js'.
+25 error Make sure you have the latest version of node.js and npm installed.
+25 error If you do, this is most likely a problem with the simple-node-rest-api package,
+25 error not with npm itself.
+25 error Tell the author that this fails on your system:
+25 error     nodemon serve.js
+25 error You can get information on how to open an issue for this project with:
+25 error     npm bugs simple-node-rest-api
+25 error Or if that isn't available, you can get their info via:
+25 error     npm owner ls simple-node-rest-api
+25 error There is likely additional logging output above.
+26 verbose exit [ 1, true ]
