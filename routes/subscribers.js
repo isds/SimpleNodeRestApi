@@ -36,9 +36,6 @@ router.patch('/', (request, response) => {
 
 router.delete('/:id', async (request, response) => {
   try {
-    // const subscriber = getSubscriber(request);
-    // console.log('DELETE', { subscriber });
-
     await SubscriberModel.remove({_id: request.params.id});
     response.json({ message: 'Deleted subscriber' });
   } catch (error) {
