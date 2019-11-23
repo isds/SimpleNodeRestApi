@@ -34,16 +34,29 @@ router.patch('/', (request, response) => {
 
 });
 
-router.delete('/:id', (request, response) => {
+router.delete('/:id', async (request, response) => {
+  try {
+    // const subscriber = getSubscriber(request);
+    // console.log('DELETE', { subscriber });
 
+    await SubscriberModel.remove({_id: request.params.id});
+    response.json({ message: 'Deleted subscriber' });
+  } catch (error) {
+    response.status(500).json({ message: error.message });
+  }
 });
 
 async function getSubscriber(request) {
   try {
-    const subscriber = await SubscriberModel.findById(request.params.id);
+    const subscriber = await SubscriberModel.findById(request.params.id, function(err, result) {
+      if (err || result == null){
+        return null;
+      }
+      return result;
+    });
     return subscriber;
   } catch (error) {
-    return response.status(404).json({message: 'Cannot find subscriber'});
+    return response.status(500).json({ message: 'Internal server error' });
   }
 }
 
